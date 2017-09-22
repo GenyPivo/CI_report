@@ -1,0 +1,25 @@
+= form_tag(charts_path, method: :post, multipart: true)
+  .container
+    br/
+    .row
+      .col-md-12
+        .panel.panel-default
+          .panel-heading
+            strong Upload files
+            small
+          .panel-body
+            .input-group.file-preview
+              input.form-control.file-preview-filename name='file_name' disabled="disabled" placeholder="" type="text" /
+              span.input-group-btn
+                button.btn.btn-default.file-preview-clear style="display:none;" type="button"
+                  span.glyphicon.glyphicon-remove
+                  | Clear
+              .btn.btn-default.file-preview-input
+                span.glyphicon.glyphicon-folder-open
+                span.file-preview-input-title Browse
+                input onchange="fileSelect(event)" name="input_file" type="file" /
+              button.btn.btn-labeled.btn-primary type="submit"
+                span.btn-label
+                  i.glyphicon.glyphicon-upload
+                | Upload
+            br/

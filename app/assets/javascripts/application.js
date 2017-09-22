@@ -13,3 +13,10 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+//= require jquery
+//= require Chart.bundle
+//= require chartkick
+
+function fileSelect(e){
+  $('input[name=file_name]').val(e.target.files[0].name)
+}
